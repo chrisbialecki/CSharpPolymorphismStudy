@@ -22,9 +22,9 @@ namespace PolymorphismStudy
             return x + y;
         }
 
-        public string SomeMethod(int x, int y)
+        public int SomeMethod(int x, int y, string a)
         {
-            return "Hi there";
+            return x;
         }
         
         
