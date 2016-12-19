@@ -10,7 +10,7 @@ namespace PolymorphismStudy
     {
         static void Main(string[] args)
         {
-            //
+            // kuku
         }
     }
 }
