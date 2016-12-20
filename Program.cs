@@ -9,13 +9,9 @@ namespace PolymorphismStudy
 
     public class Calculation
     {
-        //polymorphism - allowed when the name stays the same but parameters change.
-        // just changing return type is not enough
         
-        // signature is: name + type, kind and number of parameters
-        // return type is not part of signature
 
-
+        //method overloading. Static polymorphism
 
         public int SomeMethod(int x, int y)
         {
