@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismStudy", "PolymorphismStudy.csproj", "{BEB3CA2A-113B-49A2-B104-5BEC25EEC75A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismDynamic", "..\PolymorphismDynamic\PolymorphismDynamic.csproj", "{8BEFFA87-AAC9-4B12-BAAD-C7314C806FC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BEB3CA2A-113B-49A2-B104-5BEC25EEC75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEB3CA2A-113B-49A2-B104-5BEC25EEC75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEB3CA2A-113B-49A2-B104-5BEC25EEC75A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BEFFA87-AAC9-4B12-BAAD-C7314C806FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BEFFA87-AAC9-4B12-BAAD-C7314C806FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BEFFA87-AAC9-4B12-BAAD-C7314C806FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BEFFA87-AAC9-4B12-BAAD-C7314C806FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
