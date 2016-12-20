@@ -45,7 +45,8 @@ namespace PolymorphismDynamic
         public Rectangle(double x, double y)
             : base(x, y)
         {
-
+            Console.WriteLine("hi from Rec constructor!");
+            Console.ReadLine();
         }
 
         public override double Area()
@@ -63,7 +64,10 @@ namespace PolymorphismDynamic
     {
         public Triangle(double x, double y)
             : base(x, y)
-        { }
+        {
+            Console.WriteLine("hi from Tri constructor!");
+            Console.ReadLine();
+        }
 
         public override double Area()
         {
@@ -83,7 +87,7 @@ namespace PolymorphismDynamic
     {
        public double GetArea(Shape sh)
        {
-           Console.WriteLine("Hi from Caller");
+           Console.WriteLine("Hi from Caller GetArea");
            Console.ReadLine();
            return sh.Area();
        }
@@ -101,7 +105,7 @@ namespace PolymorphismDynamic
             double recArea = call.GetArea(rec);
             double triArea = call.GetArea(tri);
 
-            Console.WriteLine("Rectangle area is " + recArea.ToString() + "and triangle area is " + triArea.ToString());
+            Console.WriteLine("Rectangle area is " + recArea.ToString() + "\nTriangle area is " + triArea.ToString());
             Console.ReadLine();
 
 
