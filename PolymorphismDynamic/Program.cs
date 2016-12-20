@@ -10,6 +10,7 @@ namespace PolymorphismDynamic
     {
         static void Main(string[] args)
         {
+            // a kuuky
         }
     }
 }
