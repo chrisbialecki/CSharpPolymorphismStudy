@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace PolymorphismDynamic
 {
-    /*Shape
-     *variables - height and width
-     *abstract method - calulate area
-     */
 
    class Shape
     {
@@ -30,18 +26,11 @@ namespace PolymorphismDynamic
             Console.WriteLine("Hi from parent Area");
             Console.ReadLine();
            return 0;
-
         }
 
     }
 
 
-    /*Rectangle
-     * inherit Shape
-     * constructor + pass arguments to base
-     * override method Area
-     * 
-     */
 
     class Rectangle : Shape
     {
@@ -62,7 +51,7 @@ namespace PolymorphismDynamic
 
     }
 
-    //Triangle - same
+    
     class Triangle : Shape
     {
         public Triangle(double x, double y)
@@ -82,9 +71,6 @@ namespace PolymorphismDynamic
     }
 
 
-    /*Caller
-     * invoke method Area from class Shape
-     */
 
    class Caller
     {
@@ -115,11 +101,9 @@ namespace PolymorphismDynamic
                 s = rec;
             else if (option == "t")
                 s = tri;
+                     
             
             double area = call.GetArea(s);
-            //double triArea = call.GetArea(tri);
-
-            //Console.WriteLine("Rectangle area is " + recArea.ToString() + "\nTriangle area is " + triArea.ToString());
 
             Console.WriteLine("Shape area is: " + area.ToString());
             Console.ReadLine();
