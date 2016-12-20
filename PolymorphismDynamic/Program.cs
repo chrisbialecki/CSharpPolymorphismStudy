@@ -22,11 +22,14 @@ namespace PolymorphismDynamic
             _width = width;
         }
 
+        public Shape()
+        { }
+
         public virtual double Area()
         {
             Console.WriteLine("Hi from parent Area");
             Console.ReadLine();
-            return 0;
+           return 0;
 
         }
 
@@ -102,10 +105,23 @@ namespace PolymorphismDynamic
             Triangle tri = new Triangle(2, 5);
 
             Caller call = new Caller();
-            double recArea = call.GetArea(rec);
-            double triArea = call.GetArea(tri);
 
-            Console.WriteLine("Rectangle area is " + recArea.ToString() + "\nTriangle area is " + triArea.ToString());
+            Shape s = new Shape();
+
+            Console.WriteLine("enter t or r");
+            string option = Console.ReadLine();
+
+            if (option == "r")
+                s = rec;
+            else if (option == "t")
+                s = tri;
+            
+            double area = call.GetArea(s);
+            //double triArea = call.GetArea(tri);
+
+            //Console.WriteLine("Rectangle area is " + recArea.ToString() + "\nTriangle area is " + triArea.ToString());
+
+            Console.WriteLine("Shape area is: " + area.ToString());
             Console.ReadLine();
 
 
