@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OperatorOveloading
 {
-    // change the meaning of an operator
+    // Operator overloading - change the meaning of an operator. Static polymorphism
 
     public class Ball
     {
