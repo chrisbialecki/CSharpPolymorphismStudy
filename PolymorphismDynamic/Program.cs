@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace PolymorphismDynamic
 {
 
+    // method override
+
    class Shape
     {
         protected double _height;
@@ -32,13 +34,22 @@ namespace PolymorphismDynamic
 
 
 
-    class Rectangle : Shape
+    class Rectangle : Shape , ISufrace
     {
+        private double _height;
+        private double _width;
+
+        
         public Rectangle(double x, double y)
             : base(x, y)
         {
             Console.WriteLine("hi from Rec constructor!");
             Console.ReadLine();
+
+            _height = x;
+            _width = y;
+
+
         }
 
         public override double Area()
@@ -49,16 +60,28 @@ namespace PolymorphismDynamic
         }
 
 
+
+        public double CalculateArea()
+        {
+            double area = _height * _width;
+            return area;
+        }
     }
 
     
-    class Triangle : Shape
+    class Triangle : Shape, ISufrace
     {
+        private double _height;
+        private double _width;
+        
         public Triangle(double x, double y)
             : base(x, y)
         {
             Console.WriteLine("hi from Tri constructor!");
             Console.ReadLine();
+
+            _height = x;
+            _width = y;
         }
 
         public override double Area()
@@ -68,6 +91,12 @@ namespace PolymorphismDynamic
             return _height * _width / 2;
         }
 
+
+        public double CalculateArea()
+        {
+            double area = _height * _width;
+            return area;
+        }
     }
 
 
@@ -85,6 +114,12 @@ namespace PolymorphismDynamic
     
     class Program
     {
+        public static double GetArea(ISufrace sufrace)
+        {
+            double area = sufrace.CalculateArea();
+            return area;
+        }
+        
         static void Main(string[] args)
         {
             Rectangle rec = new Rectangle(3, 5);
@@ -103,10 +138,14 @@ namespace PolymorphismDynamic
                 s = tri;
                      
             
-            double area = call.GetArea(s);
+            double areaInherited = call.GetArea(s);
+            
+            double areaInterface = GetArea(rec);
 
-            Console.WriteLine("Shape area is: " + area.ToString());
+            Console.WriteLine("Inherited shape area is: " + areaInherited.ToString());
+            Console.WriteLine("Interface shape area is: " + areaInterface.ToString());
             Console.ReadLine();
+
 
 
 
